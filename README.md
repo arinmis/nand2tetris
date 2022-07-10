@@ -1,27 +1,27 @@
 ### From NAND to Tetris
-*From NAND to Tetris* guidebook to building a computer from scratch. Throughout the book, the reader makes a 16-bit computer called __ Hack __ with a bottom-up approach. The roadmap is like the below: 
+*From NAND to Tetris* is guidebook to building a computer from scratch. Throughout the book, the reader creates a 16-bit computer called __Hack__ with a bottom-up approach. The roadmap is like the below: 
 
 ```
-___________________________________
+_____________________________________
 High-Level Language / Applications
-___________________________________
+_____________________________________
 Operating Systems
-___________________________________
+_____________________________________
 Compiler
-___________________________________
+_____________________________________
 Virtual Machine
-___________________________________
+_____________________________________
 Assembler
-___________________________________
+_____________________________________
 Machine Language
-___________________________________
+_____________________________________
 Computer Architecture
-___________________________________
+_____________________________________
 ALU | Memory Elements
-___________________________________
+_____________________________________
 Boolean Arithmetic | Sequential Logic 
-___________________________________
+_____________________________________
 Boolean Logic
-___________________________________
+_____________________________________
 ```
 

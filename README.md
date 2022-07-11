@@ -12,5 +12,5 @@
 |Machine Language|
 |Computer Architecture|
 |ALU \| Memory Elements|
-|Boolern Arithmetic \| Sequential Logic |
+|Boolean Arithmetic \| Sequential Logic |
 |Boolean Logic|

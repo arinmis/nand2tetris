@@ -16,4 +16,22 @@ CHIP RAM16K {
 
     PARTS:
     // Put your code here:
+
+    DMux4Way(
+        in=load, sel=address[0..1], 
+        a=ram0load, b=ram1load, c=ram2load, d=ram3load
+    );
+
+    // 8 * RAM4K = RAM16K
+    RAM4K(in=in, load=ram0load, address=address[2..13], out=ram0out);
+    RAM4K(in=in, load=ram1load, address=address[2..13], out=ram1out);
+    RAM4K(in=in, load=ram2load, address=address[2..13], out=ram2out);
+    RAM4K(in=in, load=ram3load, address=address[2..13], out=ram3out);
+
+    // output selected subpart part of the memory
+    Mux4Way16( 
+        sel=address[0..1],
+        a=ram0out, b=ram1out, c=ram2out, d=ram3out,
+        out=out
+    );
 }

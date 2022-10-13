@@ -22,7 +22,7 @@ CHIP RAM16K {
         a=ram0load, b=ram1load, c=ram2load, d=ram3load
     );
 
-    // 8 * RAM4K = RAM16K
+    // 4 * RAM4K = RAM16K
     RAM4K(in=in, load=ram0load, address=address[2..13], out=ram0out);
     RAM4K(in=in, load=ram1load, address=address[2..13], out=ram1out);
     RAM4K(in=in, load=ram2load, address=address[2..13], out=ram2out);

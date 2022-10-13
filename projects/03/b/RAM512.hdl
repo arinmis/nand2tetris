@@ -41,4 +41,3 @@ CHIP RAM512 {
         out=out
     );
 }
-

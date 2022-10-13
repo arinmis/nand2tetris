@@ -16,4 +16,29 @@ CHIP RAM512 {
 
     PARTS:
     // Put your code here:
+    // select subpart part of the memory
+    DMux8Way(
+        in=load, sel=address[0..2], 
+        a=ram0load, b=ram1load, c=ram2load, d=ram3load,
+        e=ram4load, f=ram5load, g=ram6load, h=ram7load
+    );
+
+    // 8 * RAM64 = RAM512
+    RAM64(in=in, load=ram0load, address=address[3..8], out=ram0out);
+    RAM64(in=in, load=ram1load, address=address[3..8], out=ram1out);
+    RAM64(in=in, load=ram2load, address=address[3..8], out=ram2out);
+    RAM64(in=in, load=ram3load, address=address[3..8], out=ram3out);
+    RAM64(in=in, load=ram4load, address=address[3..8], out=ram4out);
+    RAM64(in=in, load=ram5load, address=address[3..8], out=ram5out);
+    RAM64(in=in, load=ram6load, address=address[3..8], out=ram6out);
+    RAM64(in=in, load=ram7load, address=address[3..8], out=ram7out);
+
+    // output selected subpart part of the memory
+    Mux8Way16( 
+        sel=address[0..2],
+        a=ram0out, b=ram1out, c=ram2out, d=ram3out,
+        e=ram4out, f=ram5out, g=ram6out, h=ram7out,
+        out=out
+    );
 }
+
